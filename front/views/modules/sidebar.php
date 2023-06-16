@@ -18,7 +18,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="/fullstack/front" class="nav-link <?php if($routesArray[3] == ''):?> active <?php endif ?>">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-home"></i>
               <p>
                 Home
               </p>
@@ -26,9 +26,17 @@
           </li>
           <li class="nav-item">
             <a href="/fullstack/front/clients" class="nav-link <?php if($routesArray[3] == 'clients'):?> active <?php endif ?>">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-user"></i>
               <p>
                 Cliente
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/fullstack/front/empleado" class="nav-link <?php if($routesArray[3] == 'empleado'):?> active <?php endif ?>">
+              <i class="nav-icon fas fa-briefcase"></i>
+              <p>
+                Empleado
               </p>
             </a>
           </li>

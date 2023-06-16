@@ -118,7 +118,7 @@ $routesArray = explode('/', $_SERVER['REQUEST_URI']);
 
     <?php
     if (!empty($routesArray[3])) {
-        if ($routesArray[3] == 'clients') {
+        if ($routesArray[3] == 'clients' || $routesArray[3] == 'empleado')  {
             include "views/pages/".$routesArray[3]."/".$routesArray[3].".php";
         }
     }else{
