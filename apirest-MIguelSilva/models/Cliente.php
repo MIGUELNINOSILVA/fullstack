@@ -2,7 +2,11 @@
 class Cliente extends Conectar{
 
     public function get_cliente(){
-         
+        $conectar = parent::conexion();
+        parent::set_name();
+        $stm = $conectar->prepare("SELECT * FROM cliente");
+        $stm->execute();
+        return $stm->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function get_cliente_id($id){
