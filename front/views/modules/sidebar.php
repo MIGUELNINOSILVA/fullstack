@@ -40,6 +40,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="/fullstack/front/productos" class="nav-link <?php if($routesArray[3] == 'productos'):?> active <?php endif ?>">
+              <i class="nav-icon fas fa-briefcase"></i>
+              <p>
+                Productos
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

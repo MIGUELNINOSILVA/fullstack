@@ -23,9 +23,9 @@ $routesArray = explode('/', $_SERVER['REQUEST_URI']);
     <link rel="stylesheet" href="views/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
     <!-- DataTables -->
-  <link rel="stylesheet" href="views/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="views/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="views/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="views/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="views/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="views/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
     <!-- jQuery -->
     <script src="views/plugins/jquery/jquery.min.js"></script>
@@ -135,18 +135,24 @@ $routesArray = explode('/', $_SERVER['REQUEST_URI']);
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <!-- <?php
-    echo "<pre>";
+        echo "<pre>";
         print_r($routesArray);
         echo "<pre>";
     ?> -->
 
             <?php
     if (!empty($routesArray[3])) {
-        if ($routesArray[3] == 'clients' || $routesArray[3] == 'empleado')  {
+        if ($routesArray[3] == 'clients' || $routesArray[3] == 'empleado' || $routesArray[3] == 'productos')  {
             include "views/pages/".$routesArray[3]."/".$routesArray[3].".php";
         }
     }else{
         include "views/pages/home/home.php";
+    }
+
+    if (!empty($routesArray[3])) {
+        if ($routesArray[3]=='clients') {
+            include "views/pages/clients/actions/editar.php";
+        }
     }
     ?>
         </div>

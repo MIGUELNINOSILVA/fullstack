@@ -1,5 +1,5 @@
 <?php
-$url = "http://localhost/fullstack/apirest-MIguelSilva/controllers/clientes.php?op=getAll";
+$url = "http://localhost/fullstack/apirest-MIguelSilva/controllers/empleados.php?op=getAll";
 $update = "http://localhost/fullstack/apirest-MIguelSilva/controllers/clientes.php?op=update";
 $curl = curl_init();
 $update = curl_init();
@@ -11,18 +11,16 @@ $output = json_decode(curl_exec($curl));
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Datos de Clientes</h3>
+        <h3 class="card-title">Datos de Empleados</h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Constructora</th>
-                    <th>Direccion</th>
-                    <th>Telefono</th>
-                    <th>Detalles</th>
+                    <th>Usuario empleado</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,12 +29,8 @@ $output = json_decode(curl_exec($curl));
                 ?>
                 <tr>
 
-                    <td><?php echo $val->nombre; ?></td>
-                    <td><?php echo $val->constructora_id; ?></td>
-                    <td><?php echo $val->direccion; ?></td>
-                    <td><?php echo $val->telefono; ?></td>
-                    <td><?php echo $val->telefono; ?></td>
-                    <td><a href="actions/editar.php?<?=$val->id_cliente?>" class="btn btn-primary">Editar</a></td>
+                    <td><?php echo $val->usuario; ?></td>
+                    <td><a href="actions/editar.php?<?=$val->empleado_id?>" class="btn btn-primary">Editar</a></td>
                     <td><a href="eliminar.php" class="btn btn-danger">Eliminar</a></td>
                 </tr>
                 <?php }?>
